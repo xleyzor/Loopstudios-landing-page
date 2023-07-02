@@ -1,0 +1,549 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+  --main-font: "Alata", sans-serif;
+  --title-font: "Josefin Sans", sans-serif;
+  --linear-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  --hover-linear-gradient: linear-gradient(
+    rgba(100%, 100%, 100%, 0.7),
+    rgba(100%, 100%, 100%, 0.7)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  padding: 0 10rem;
+}
+
+.hero {
+  background: var(--linear-gradient),
+    url(images/desktop/image-hero.jpg) no-repeat;
+  max-width: 100%;
+  height: 650px;
+  padding-top: 4rem;
+}
+.logo {
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a,
+.footer-navbar a {
+  text-decoration: none;
+  color: var(--White);
+  font-family: var(--main-font);
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navbar a::after,
+.footer-navbar a::after {
+  transition: all 0.3s;
+  content: "";
+  opacity: 0;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--White);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.navbar a:hover::after,
+.footer-navbar a:hover::after {
+  opacity: 1;
+  width: 60%;
+}
+
+.container {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container-title {
+  padding: 2.5rem;
+  max-width: 660px;
+  font-size: 4.6rem;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 300;
+  color: var(--White);
+  border: 1px solid var(--White);
+  display: block;
+  line-height: 1;
+}
+
+.interactive .container {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.interactive-container-image {
+  background: url(images/desktop/image-interactive.jpg);
+  width: 731px;
+  height: 500px;
+}
+.interactive-container-text-box {
+  padding: 5rem;
+  background-color: #fff;
+  position: absolute;
+  max-width: 660px;
+  right: -110px;
+  bottom: -90px;
+}
+
+.interactive-container-text-box h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 300;
+}
+
+.interactive-container-text-box p {
+  margin-top: 1.5rem;
+  font-size: 15px;
+  line-height: 1.7;
+  font-family: var(--main-font);
+  color: var(--Dark-Gray);
+  letter-spacing: 0.8px;
+}
+.creations {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.creations .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.title h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-weight: 300;
+}
+
+.title-btn {
+  padding: 0.6rem 3rem;
+  letter-spacing: 3px;
+  border: 1px solid var(--Black);
+  background-color: var(--White);
+  color: var(--black);
+  font-family: var(--main-font);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.title-btn:hover {
+  background-color: var(--Black);
+  color: var(--White);
+}
+
+.creations-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 450px);
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.creations-grid-item:nth-child(1) {
+  background: var(--linear-gradient), url(images/desktop/image-deep-earth.jpg);
+}
+.creations-grid-item:nth-child(1):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-deep-earth.jpg);
+}
+.creations-grid-item:nth-child(2) {
+  background: var(--linear-gradient), url(images/desktop/image-night-arcade.jpg);
+}
+.creations-grid-item:nth-child(2):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-night-arcade.jpg);
+}
+.creations-grid-item:nth-child(3) {
+  background: var(--linear-gradient), url(images/desktop/image-soccer-team.jpg);
+}
+.creations-grid-item:nth-child(3):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-soccer-team.jpg);
+}
+.creations-grid-item:nth-child(4) {
+  background: var(--linear-gradient), url(images/desktop/image-grid.jpg);
+}
+.creations-grid-item:nth-child(4):hover {
+  background: var(--hover-linear-gradient), url(images/desktop/image-grid.jpg);
+}
+.creations-grid-item:nth-child(5) {
+  background: var(--linear-gradient), url(images/desktop/image-from-above.jpg);
+}
+.creations-grid-item:nth-child(5):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-from-above.jpg);
+}
+.creations-grid-item:nth-child(6) {
+  background: var(--linear-gradient),
+    url(images/desktop/image-pocket-borealis.jpg);
+}
+.creations-grid-item:nth-child(6):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-pocket-borealis.jpg);
+}
+.creations-grid-item:nth-child(7) {
+  background: var(--linear-gradient), url(images/desktop/image-curiosity.jpg);
+}
+.creations-grid-item:nth-child(7):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-curiosity.jpg);
+}
+.creations-grid-item:nth-child(8) {
+  background: var(--linear-gradient), url(images/desktop/image-fisheye.jpg);
+}
+.creations-grid-item:nth-child(8):hover {
+  background: var(--hover-linear-gradient),
+    url(images/desktop/image-fisheye.jpg);
+}
+
+.creations-grid-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.creations-grid-item:hover h2 {
+  color: var(--Black);
+}
+.creations-grid-item h2 {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--White);
+  font-weight: 300;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  word-wrap: break-word;
+}
+
+.bot-btn {
+  display: none;
+}
+.creations-grid-item:nth-child(1) h2 {
+  max-width: 150px;
+}
+
+.creations-grid-item:nth-child(4) h2 {
+  max-width: 100px;
+}
+
+footer {
+  background: var(--Black);
+  padding: 3rem 10rem;
+}
+
+.footer-navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social img:not(:last-child) {
+  margin-right: 0.7rem;
+}
+
+.social img {
+  cursor: pointer;
+}
+.social img:hover {
+  opacity: 0.5;
+}
+
+.footer-bottom p {
+  color: var(--Dark-Gray);
+  font-family: var(--main-font);
+}
+
+.bars {
+  cursor: pointer;
+  display: none;
+}
+
+.bars i {
+  color: white;
+}
+
+.mobile-navbar {
+  position: absolute;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  right: 0;
+  align-items: center;
+  bottom: -280px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  display: none;
+}
+
+.mobile-navbar a:hover {
+  background-color: var(--Black);
+  color: var(--White);
+}
+.show {
+  bottom: -355px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-navbar a {
+  text-decoration: none;
+  color: var(--Black);
+  font-family: var(--main-font);
+  font-weight: 300;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s all;
+}
+
+@media (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+  section {
+    padding: 0 1.5rem;
+  }
+  .hero {
+    background: url(images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: contain;
+    padding-top: 2rem;
+  }
+  .navbar {
+    display: none;
+  }
+  .hero-container-title {
+    max-width: 100%;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+  .mobile-navbar {
+    display: flex;
+  }
+  .bars {
+    display: block;
+  }
+  .interactive .container {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .interactive-container-image {
+    width: 100%;
+    height: 230px;
+    background: url(images/mobile/image-interactive.jpg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .interactive-container-text-box {
+    position: relative;
+    text-align: center;
+    left: 0;
+  }
+  .interactive-container-text-box {
+    padding: 0;
+    inset: 0;
+    margin-top: 2.5rem;
+    max-width: 100%;
+  }
+  .interactive-container-text-box h1 {
+    font-size: 2rem;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    width: 100%;
+    height: 1500px;
+  }
+  .title {
+    align-items: center;
+    justify-content: center;
+  }
+  .title h1 {
+    font-size: 2rem;
+  }
+  .bot-btn {
+    display: block;
+    margin-top: 2rem;
+  }
+  .top-btn {
+    display: none;
+  }
+
+  .creations-grid-item:nth-child(1) {
+    background: var(--linear-gradient), url(images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(1):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(2) {
+    background: var(--linear-gradient),
+      url(images/mobile/image-night-arcade.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(2):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-night-arcade.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(3) {
+    background: var(--linear-gradient), url(images/mobile/image-soccer-team.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(3):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-soccer-team.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(4) {
+    background: var(--linear-gradient), url(images/mobile/image-grid.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(4):hover {
+    background: var(--hover-linear-gradient), url(images/mobile/image-grid.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(5) {
+    background: var(--linear-gradient), url(images/mobile/image-from-above.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(5):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-from-above.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(6) {
+    background: var(--linear-gradient),
+      url(images/mobile/image-pocket-borealis.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(6):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-pocket-borealis.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(7) {
+    background: var(--linear-gradient), url(images/mobile/image-curiosity.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(7):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-curiosity.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(8) {
+    background: var(--linear-gradient), url(images/mobile/image-fisheye.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item:nth-child(8):hover {
+    background: var(--hover-linear-gradient),
+      url(images/mobile/image-fisheye.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .creations-grid-item h2 {
+    font-size: 1.5rem;
+    max-width: 150px;
+    left: 20px;
+  }
+  .creations-grid-item:first-child h2 {
+    max-width: 100px;
+  }
+
+  footer {
+    display: none;
+  }
+}
