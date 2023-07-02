@@ -12,6 +12,6 @@
     Solution URL: <a href="">Click Here!</a>
     </li>
     <li>
-    Live site URL: <a href="">Click Here!</a>
+    Live site URL: <a href="https://loopstudios-landing-page-sepia-seven.vercel.app/">Click Here!</a>
     </li>
 </ul>
