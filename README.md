@@ -9,9 +9,9 @@
 
 <ul>
     <li>
-    Solution URL: <a href="">Click Here!</a>
+    Solution URL: <a href="https://www.frontendmentor.io/solutions/loopstudios-landing-page-DLUu8zeyk_">Click Here!</a>
     </li>
     <li>
-    Live site URL: <a href="https://loopstudios-landing-page-sepia-seven.vercel.app/">Click Here!</a>
+    Live site URL: <a href="https://loopstudios-landing-page-lilac-iota.vercel.app/">Click Here!</a>
     </li>
 </ul>
